@@ -1,9 +1,10 @@
+import HeroSection from "./components/hero/HeroSection"
 
 
 function App() {
   return (
     <>
-      <div>yo</div>
+      <HeroSection />
     </>
   )
 }
