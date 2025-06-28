@@ -25,7 +25,7 @@ const AboutMeSection = () => {
   return (
     <div
       ref={ref}
-      className="flex flex-col text-center h-[100vh] w-full justify-center lg:py-18 gap-6"
+      className="flex flex-col text-center lg:h-[70vh] w-full justify-center lg:py-18 gap-6"
     >
       <motion.h1
         className="text-5xl font-medium"

@@ -12,7 +12,7 @@ const SkillsSection = () => {
       <HorizontalScrollCarousel />
       <div className="flex h-48 items-center justify-center px-8">
         <motion.span 
-            className="font-semibold uppercase text-5xl text-center from-white to-gray-400"
+            className="font-semibold uppercase text-5xl text-center text-green-500 from-white to-gray-400"
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: 1, y: -250 }}
             transition={{ duration: 0.7 }}
