@@ -3,7 +3,7 @@ import { useRef } from "react";
 
 const SkillsSection = () => {
   return (
-    <div>
+    <div className="flex flex-col">
       <div className="flex h-48 items-center justify-center px-8">
         <span className="font-semibold uppercase text-2xl text-center from-white to-gray-400">
           What can I do when it comes to tech...
@@ -13,8 +13,8 @@ const SkillsSection = () => {
       <div className="flex h-48 items-center justify-center px-8">
         <motion.span 
             className="font-semibold uppercase text-5xl text-center from-white to-gray-400"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: -250 }}
             transition={{ duration: 0.7 }}
         >
           At least this is what I think I can do :) 
@@ -32,11 +32,11 @@ const HorizontalScrollCarousel = () => {
 
   const isMobile = window.innerWidth < 768;
 
-  const x = useTransform(scrollYProgress, [0, 1], isMobile ? ["1%", "-100%"] : ["1%", "-55%"]);
+  const x = useTransform(scrollYProgress, [0, 1], isMobile ? ["1%", "-100%"] : ["1%", "-100%"]);
 
   return (
     <section ref={targetRef} className="relative h-[250vh]">
-      <div className="sticky top-0 flex items-center overflow-hidden">
+      <div className="sticky top-60 flex items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-8">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
