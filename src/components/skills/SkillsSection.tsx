@@ -3,7 +3,7 @@ import { useRef } from "react";
 
 const SkillsSection = () => {
   return (
-    <div className="flex flex-col">
+    <motion.div className="flex flex-col">
       <div className="flex h-48 items-center justify-center px-8">
         <span className="font-semibold uppercase text-2xl text-center from-white to-gray-400">
           What can I do when it comes to tech...
@@ -20,7 +20,7 @@ const SkillsSection = () => {
           At least this is what I think I can do :) 
         </motion.span>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -30,12 +30,10 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const isMobile = window.innerWidth < 768;
-
-  const x = useTransform(scrollYProgress, [0, 1], isMobile ? ["1%", "-100%"] : ["1%", "-100%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-100%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[250vh]">
+    <motion.section initial={{opacity: 0, x: 200}} whileInView={{opacity: 1, x: 0}} transition={{duration: 1.3}} ref={targetRef} className="relative h-[250vh]">
       <div className="sticky top-60 flex items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-8">
           {cards.map((card) => {
@@ -43,7 +41,7 @@ const HorizontalScrollCarousel = () => {
           })}
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

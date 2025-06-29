@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { useAnimatedText } from "../utils/AnimatedText";
 
@@ -27,20 +27,8 @@ const AboutMeSection = () => {
       ref={ref}
       className="flex flex-col text-center lg:h-[70vh] w-full justify-center lg:py-18 gap-6"
     >
-      <motion.h1
-        className="text-5xl font-medium"
-      >
-        {animatedHeading}
-      </motion.h1>
-
-      <motion.span
-        className="text-xl lg:px-48 px-8"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isInView ? 1 : 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-      >
-        {animatedText}
-      </motion.span>
+      <h1 className="text-5xl font-medium">{animatedHeading}</h1>
+      <span className="text-xl lg:px-48 px-8">{animatedText}</span>
     </div>
   );
 };

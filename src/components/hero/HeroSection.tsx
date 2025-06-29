@@ -49,7 +49,7 @@ const HeroSection = () => {
           }}
           className="group relative flex max-w-96 items-center rounded-full transition-colors hover:bg-gray-950/50"
         />
-        <h1 className="max-w-3xl bg-gradient-to-br from-white to-gray-400 py-4 bg-clip-text text-center text-3xl font-medium leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
+        <h1 className="max-w-3xl bg-gradient-to-br from-white to-[#4CAF50] py-4 bg-clip-text text-center text-3xl font-medium leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
           {animatedHi} <br /> {animatedName}
         </h1>
         <h2 className="max-w-2xl text-2xl bg-gradient-to-br text-center from-white to-gray-400 bg-clip-text">{animatedActionText}</h2>
